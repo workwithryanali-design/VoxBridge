@@ -920,35 +920,38 @@ footer{background:#040a17;color:white;padding:70px 0 25px}
       </p>
     </div>
 
-    <form class="form" onsubmit="return handleSubmit(event)">
+    <form class="form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="5dfeed74-76b4-4626-aec5-287346053726">
+      <input type="hidden" name="subject" value="New VoxBridge Business Inquiry">
+      
       <div class="field">
         <label>Full Name</label>
-        <input type="text" required placeholder="Your name">
+        <input type="text" name="name" required placeholder="Your name">
       </div>
 
       <div class="field">
         <label>Business Email</label>
-        <input type="email" required placeholder="you@company.com">
+        <input type="email" name="email" required placeholder="you@company.com">
       </div>
 
       <div class="field">
         <label>Company Name</label>
-        <input type="text" placeholder="Company">
+        <input type="text" name="company" placeholder="Company">
       </div>
 
       <div class="field">
         <label>Country</label>
-        <input type="text" placeholder="Country">
+        <input type="text" name="country" placeholder="Country">
       </div>
 
       <div class="field">
         <label>Phone</label>
-        <input type="tel" placeholder="+1 ...">
+        <input type="tel" name="phone" placeholder="+1 ...">
       </div>
 
       <div class="field">
         <label>Service</label>
-        <select>
+        <select name="service">
           <option>Customer Support</option>
           <option>Call Center Services</option>
           <option>Taxi Dispatch</option>
@@ -963,12 +966,12 @@ footer{background:#040a17;color:white;padding:70px 0 25px}
 
       <div class="field full">
         <label>Team Size Needed</label>
-        <input type="text" placeholder="e.g. 2 agents, 5 agents, 10+ agents">
+        <input type="text" name="team_size" placeholder="e.g. 2 agents, 5 agents, 10+ agents">
       </div>
 
       <div class="field full">
         <label>Message</label>
-        <textarea placeholder="Tell us about your requirements..."></textarea>
+        <textarea name="message" required placeholder="Tell us about your requirements..."></textarea>
       </div>
 
       <div class="privacy">
@@ -1030,14 +1033,6 @@ footer{background:#040a17;color:white;padding:70px 0 25px}
     </div>
   </div>
 </footer>
-
-<script>
-function handleSubmit(e){
-  e.preventDefault();
-  alert("Thank you. Your inquiry has been prepared for submission. Connect this form to your preferred email/form service before launch.");
-  return false;
-}
-</script>
 
 </body>
 </html>
