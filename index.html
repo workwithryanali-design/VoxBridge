@@ -99,6 +99,42 @@ p{color:var(--muted)}
 .nav-links a:hover{color:white}
 .nav-actions{display:flex;gap:10px}
 .menu{display:none;color:white;font-size:26px;cursor:pointer}
+  .mobile-menu{
+  display:none;
+  position:absolute;
+  top:76px;
+  left:14px;
+  right:14px;
+  background:#0b1429;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:12px;
+  padding:12px;
+  box-shadow:0 20px 45px rgba(0,0,0,.25);
+}
+
+.mobile-menu a{
+  display:block;
+  padding:13px 12px;
+  color:#cbd5e1;
+  font-size:14px;
+  font-weight:600;
+  border-radius:8px;
+}
+  .mobile-menu a:hover{
+  background:rgba(255,255,255,.06);
+  color:white;
+}
+
+.mobile-cta{
+  margin-top:8px;
+  background:var(--blue);
+  color:white !important;
+  text-align:center;
+}
+
+.mobile-menu.show{
+  display:block;
+}
 
 .hero{
   position:relative;
@@ -563,6 +599,14 @@ footer{background:#040a17;color:white;padding:70px 0 25px}
     </div>
 
     <div class="menu"><i class="ti ti-menu-2"></i></div>
+    <div class="mobile-menu">
+  <a href="#services">Services</a>
+  <a href="#industries">Industries</a>
+  <a href="#why">Why VoxBridge</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="mobile-cta">Get Started</a>
+</div>
   </div>
 </nav>
 
@@ -1033,6 +1077,19 @@ footer{background:#040a17;color:white;padding:70px 0 25px}
     </div>
   </div>
 </footer>
+<script>
+const menuButton = document.querySelector('.menu');
+const mobileMenu = document.querySelector('.mobile-menu');
 
+menuButton.addEventListener('click', () => {
+  mobileMenu.classList.toggle('show');
+});
+
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('show');
+  });
+});
+</script>
 </body>
 </html>
