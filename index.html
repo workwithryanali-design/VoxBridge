@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VoxBridge | Global BPO, Dispatch & Business Support Services</title>
+<meta name="description" content="VoxBridge Support provides professional BPO, customer support, taxi dispatch, limo dispatch, virtual assistance and AI-assisted business support for international companies.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="VoxBridge | Global Business Support">
+<meta property="og:description" content="Professional BPO, customer experience and transportation dispatch support for global businesses.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+<style>
+:root{
+  --navy:#060d1f;
+  --navy2:#0b1429;
+  --blue:#1d4ed8;
+  --blue2:#60a5fa;
+  --text:#0f172a;
+  --muted:#64748b;
+  --light:#f8faff;
+  --line:#e2e8f0;
+  --white:#fff;
+  --max:1240px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,Arial,sans-serif;
+  color:var(--text);
+  background:var(--white);
+  line-height:1.65;
+  overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+section{padding:108px 0}
+.eyebrow{
+  color:var(--blue);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+h1,h2,h3{line-height:1.08;letter-spacing:-.035em}
+h2{font-size:clamp(34px,4vw,54px)}
+h3{font-size:20px}
+p{color:var(--muted)}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  min-height:48px;
+  padding:0 20px;
+  border-radius:8px;
+  font-size:14px;
+  font-weight:700;
+  transition:.25s ease;
+  border:1px solid transparent;
+}
+.btn-primary{background:var(--blue);color:white}
+.btn-primary:hover{background:#1741b7;transform:translateY(-2px)}
+.btn-ghost{border-color:rgba(255,255,255,.2);color:white}
+.btn-ghost:hover{background:rgba(255,255,255,.07)}
+
+.nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(6,13,31,.94);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav-inner{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
+.logo{
+  color:white;
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:-.05em;
+}
+.logo span{color:var(--blue2)}
+.nav-links{display:flex;gap:27px;color:#cbd5e1;font-size:13px;font-weight:600}
+.nav-links a:hover{color:white}
+.nav-actions{display:flex;gap:10px}
+.menu{display:none;color:white;font-size:26px;cursor:pointer}
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  background:var(--navy);
+  color:white;
+  padding:125px 0 115px;
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  opacity:.12;
+  background-image:
+    linear-gradient(rgba(96,165,250,.25) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(96,165,250,.25) 1px,transparent 1px);
+  background-size:55px 55px;
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  width:600px;
+  height:600px;
+  right:-200px;
+  top:-200px;
+  border-radius:50%;
+  background:rgba(29,78,216,.18);
+  filter:blur(90px);
+}
+.hero-grid{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  align-items:center;
+  gap:70px;
+}
+.hero h1{
+  font-size:clamp(46px,6vw,78px);
+  max-width:800px;
+}
+.hero h1 span{color:#93c5fd}
+.hero-copy{
+  max-width:650px;
+  margin:27px 0 34px;
+  color:#aab8cd;
+  font-size:17px;
+}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap}
+
+.globe{
+  min-height:390px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.035);
+  border-radius:18px;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.globe-ring{
+  width:280px;
+  height:280px;
+  border:1px solid rgba(96,165,250,.5);
+  border-radius:50%;
+  box-shadow:0 0 80px rgba(29,78,216,.15);
+  position:relative;
+}
+.globe-ring:before,.globe-ring:after{
+  content:"";
+  position:absolute;
+  inset:28px 80px;
+  border-left:1px solid rgba(96,165,250,.3);
+  border-right:1px solid rgba(96,165,250,.3);
+  border-radius:50%;
+}
+.globe-ring:after{
+  inset:80px 28px;
+  border:0;
+  border-top:1px solid rgba(96,165,250,.3);
+  border-bottom:1px solid rgba(96,165,250,.3);
+}
+.node{
+  position:absolute;
+  width:9px;height:9px;
+  background:#60a5fa;
+  border-radius:50%;
+  box-shadow:0 0 18px #60a5fa;
+}
+.node.pk{left:57%;top:53%}
+.node.us{left:25%;top:43%}
+.node.uk{left:43%;top:28%}
+.node.ca{left:27%;top:31%}
+.node.au{left:76%;top:73%}
+.node.ae{left:61%;top:58%}
+.globe-label{
+  position:absolute;
+  bottom:22px;
+  left:22px;
+  color:#94a3b8;
+  font-size:12px;
+}
+
+.strip{background:#0b1429;color:white;padding:24px 0}
+.strip-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+.strip-item{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  font-size:13px;
+  font-weight:700;
+  color:#cbd5e1;
+}
+.strip-item i{color:#60a5fa;font-size:19px}
+
+.section-head{max-width:720px;margin-bottom:55px}
+.section-head h2{margin-bottom:20px}
+
+.services{background:white}
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.card{
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:28px;
+  background:white;
+  transition:.28s ease;
+  position:relative;
+  overflow:hidden;
+}
+.card:before{
+  content:"";
+  position:absolute;
+  top:0;left:0;right:0;
+  height:2px;
+  background:var(--blue);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:.28s ease;
+}
+.card:hover{
+  transform:translateY(-5px);
+  border-color:#cbd5e1;
+  box-shadow:0 16px 40px rgba(15,23,42,.07);
+}
+.card:hover:before{transform:scaleX(1)}
+.icon{
+  width:46px;height:46px;
+  border-radius:10px;
+  background:#eff6ff;
+  color:var(--blue);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:23px;
+  margin-bottom:24px;
+}
+.card h3{margin-bottom:11px}
+.card p{font-size:14px;margin-bottom:21px}
+.learn{
+  color:var(--blue);
+  font-size:13px;
+  font-weight:800;
+  display:inline-flex;
+  gap:6px;
+  align-items:center;
+}
+
+.dark{background:var(--navy);color:white}
+.dark p{color:#94a3b8}
+.why-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
+}
+.quote{
+  margin-top:32px;
+  border-left:2px solid var(--blue2);
+  padding:22px 24px;
+  background:rgba(255,255,255,.035);
+  color:#dbeafe;
+  font-size:17px;
+}
+.pillars{display:grid;gap:12px}
+.pillar{
+  display:grid;
+  grid-template-columns:45px 1fr;
+  gap:18px;
+  padding:23px;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:11px;
+  background:rgba(255,255,255,.025);
+}
+.number{color:#60a5fa;font-weight:800;font-size:13px}
+.pillar p{font-size:14px;margin-top:6px}
+
+.process{background:#f1f6ff}
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  position:relative;
+}
+.process-grid:before{
+  content:"";
+  position:absolute;
+  top:24px;
+  left:12%;
+  right:12%;
+  height:1px;
+  background:#93c5fd;
+}
+.step{position:relative;text-align:center;padding:0 15px}
+.step-circle{
+  width:48px;height:48px;
+  margin:0 auto 23px;
+  background:var(--blue);
+  color:white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  position:relative;
+  z-index:2;
+}
+.step h3{margin-bottom:9px}
+.step p{font-size:13px}
+
+.industries-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+.industry{
+  padding:26px;
+  border:1px solid var(--line);
+  border-radius:11px;
+  transition:.25s;
+}
+.industry i{font-size:24px;color:var(--blue);display:block;margin-bottom:22px}
+.industry:hover{background:var(--blue);color:white;transform:translateY(-3px)}
+.industry:hover i{color:white}
+.industry p{font-size:13px;margin-top:7px}
+.industry:hover p{color:#dbeafe}
+
+.global{
+  background:var(--navy);
+  color:white;
+  text-align:center;
+}
+.global-map{
+  margin:45px auto 25px;
+  max-width:850px;
+  min-height:260px;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    radial-gradient(circle at 50% 50%,rgba(29,78,216,.13),transparent 48%);
+}
+.map-icon{font-size:180px;color:#334155}
+.market-pills{display:flex;justify-content:center;gap:9px;flex-wrap:wrap}
+.market-pills span{
+  border:1px solid rgba(255,255,255,.14);
+  color:#cbd5e1;
+  border-radius:50px;
+  padding:8px 15px;
+  font-size:12px;
+}
+
+.quality{background:white}
+.quality-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.quality-card{padding:32px;border:1px solid var(--line);border-radius:12px}
+.quality-card strong{font-size:48px;color:#dbeafe;display:block;margin-bottom:25px}
+.quality-card p{margin-top:10px;font-size:14px}
+
+.about{background:var(--light)}
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:start;
+}
+.about-copy p{margin-top:20px;max-width:650px}
+.stats{display:grid;gap:12px}
+.stat{
+  padding:25px;
+  border:1px solid var(--line);
+  background:white;
+  border-radius:10px;
+}
+.stat small{
+  display:block;
+  color:var(--blue);
+  font-size:11px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  margin-bottom:8px;
+}
+.stat strong{font-size:17px}
+
+.tech{background:#f8faff}
+.tech-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+.tech-list{display:grid;gap:12px}
+.tech-item{
+  display:flex;
+  align-items:flex-start;
+  gap:15px;
+  padding:18px;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:10px;
+}
+.tech-item i{color:var(--blue);font-size:22px}
+.tech-item p{font-size:13px;margin-top:4px}
+
+.cta{
+  background:var(--navy);
+  color:white;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.cta:before{
+  content:"";
+  position:absolute;
+  width:500px;height:500px;
+  left:50%;top:50%;
+  transform:translate(-50%,-50%);
+  background:rgba(29,78,216,.12);
+  border-radius:50%;
+  filter:blur(80px);
+}
+.cta-inner{position:relative;z-index:2}
+.cta h2{max-width:800px;margin:0 auto 20px}
+.cta p{max-width:650px;margin:0 auto 30px}
+
+.contact{background:var(--light)}
+.contact-grid{
+  display:grid;
+  grid-template-columns:.75fr 1.25fr;
+  gap:70px;
+}
+.contact-copy p{margin-top:18px}
+.form{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:30px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-size:12px;font-weight:700}
+.field input,.field select,.field textarea{
+  width:100%;
+  border:1px solid #dbe3ed;
+  border-radius:7px;
+  padding:12px 13px;
+  outline:none;
+  background:white;
+}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #dbeafe}
+textarea{min-height:120px;resize:vertical}
+.privacy{font-size:11px;color:#94a3b8;grid-column:1/-1}
+
+footer{background:#040a17;color:white;padding:70px 0 25px}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:40px;
+  padding-bottom:55px;
+}
+.footer-brand p{margin:16px 0 23px;max-width:330px;font-size:13px;color:#94a3b8}
+.footer h4{font-size:13px;margin-bottom:18px}
+.footer-links{display:grid;gap:10px}
+.footer-links a{font-size:13px;color:#94a3b8}
+.footer-links a:hover{color:white}
+.legal{
+  border-top:1px solid rgba(255,255,255,.08);
+  padding-top:22px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+  font-size:11px;
+  color:#64748b;
+}
+
+@media(max-width:1050px){
+  .nav-links{display:none}
+  .menu{display:block}
+  .service-grid{grid-template-columns:repeat(2,1fr)}
+  .industries-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-grid,.why-grid,.about-grid,.tech-grid,.contact-grid{grid-template-columns:1fr}
+  .hero{padding:90px 0}
+  .globe{min-height:330px}
+}
+
+@media(max-width:700px){
+  section{padding:75px 0}
+  .container{width:min(100% - 28px,var(--max))}
+  .nav-actions{display:none}
+  .hero h1{font-size:43px}
+  .hero-copy{font-size:15px}
+  .strip-grid,.service-grid,.industries-grid,.quality-grid,.process-grid{grid-template-columns:1fr}
+  .strip-grid{gap:15px}
+  .process-grid{gap:32px}
+  .process-grid:before{display:none}
+  .step{padding:0}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .form{grid-template-columns:1fr;padding:20px}
+  .field.full{grid-column:auto}
+  .privacy{grid-column:auto}
+  .contact-grid,.why-grid,.about-grid,.tech-grid{gap:40px}
+  .globe-ring{width:220px;height:220px}
+}
+
+@media(max-width:480px){
+  .footer-grid{grid-template-columns:1fr}
+  .hero-buttons .btn{width:100%}
+}
+</style>
+</head>
+
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="#" class="logo">Vox<span>Bridge</span></a>
+
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#industries">Industries</a>
+      <a href="#why">Why VoxBridge</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <a class="btn btn-ghost" href="#services">Explore</a>
+      <a class="btn btn-primary" href="#contact">Get Started</a>
+    </div>
+
+    <div class="menu"><i class="ti ti-menu-2"></i></div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Global BPO • Dispatch • Business Support</div>
+      <h1>Your Customers. <span>Our People.</span> One Seamless Experience.</h1>
+      <p class="hero-copy">
+        VoxBridge helps international businesses strengthen customer experience,
+        streamline operations and build dependable support capacity through trained
+        teams, 24/7 support and AI-assisted workflows.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#services" class="btn btn-primary">Explore Services <i class="ti ti-arrow-right"></i></a>
+        <a href="#contact" class="btn btn-ghost">Talk to Our Team</a>
+      </div>
+    </div>
+
+    <div class="globe">
+      <div class="globe-ring">
+        <span class="node pk"></span>
+        <span class="node us"></span>
+        <span class="node uk"></span>
+        <span class="node ca"></span>
+        <span class="node au"></span>
+        <span class="node ae"></span>
+      </div>
+      <div class="globe-label">Pakistan operations connecting businesses with global markets</div>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="container strip-grid">
+    <div class="strip-item"><i class="ti ti-clock"></i> 24/7 Support</div>
+    <div class="strip-item"><i class="ti ti-users"></i> Trained Staff</div>
+    <div class="strip-item"><i class="ti ti-world"></i> Global Client Focus</div>
+    <div class="strip-item"><i class="ti ti-sparkles"></i> AI-Assisted Operations</div>
+  </div>
+</div>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">What We Do</div>
+      <h2>Support built around how your business operates.</h2>
+      <p>From customer conversations to transportation dispatch and back-office workflows, our trained teams provide flexible operational support.</p>
+    </div>
+
+    <div class="service-grid">
+      <div class="card">
+        <div class="icon"><i class="ti ti-headset"></i></div>
+        <h3>Customer Support</h3>
+        <p>Professional customer communication designed to keep your customers informed, supported and heard.</p>
+        <a class="learn" href="#contact">Learn more <i class="ti ti-arrow-up-right"></i></a>
+      </div>
+
+      <div class="card">
+        <div class="icon"><i class="ti ti-phone"></i></div>
+        <h3>Call Center Services</h3>
+        <p>Inbound and outbound call support for businesses that need dependable communication coverage.</p>
+        <a class="learn" href="#contact">Learn more <i class="ti ti-arrow-up-right"></i></a>
+      </div>
+
+      <div class="card">
+        <div class="icon"><i class="ti ti-car"></i></div>
+        <h3>Taxi Dispatch</h3>
+        <p>Trained dispatch support for bookings, customer calls, driver coordination, scheduling and daily transportation operations.</p>
+        <a class="learn" href="#contact">Discuss dispatch <i class="ti ti-arrow-up-right"></i></a>
+      </div>
+
+      <div class="card">
+        <div class="icon"><i class="ti ti-car-garage"></i></div>
+        <h3>Limo Dispatch</h3>
+        <p>Professional support for limousine and chauffeur operations, including reservations, dispatch coordination and customer communication.</p>
+        <a class="learn" href="#contact">Discuss dispatch <i class="ti ti-arrow-up-right"></i></a>
+      </div>
+
+      <div class="card">
+        <div class="icon"><i class="ti ti-target-arrow"></i></div>
+        <h3>Lead Generation</h3>
+        <p>Organized outreach and lead support designed to help businesses maintain a consistent sales pipeline.</p>
+        <a class="learn" href="#contact">Learn more <i class="ti ti-arrow-up-right"></i></a>
+      </div>
+
+      <div class="card">
+        <div class="icon"><i class="ti ti-user-check"></i></div>
+        <h3>Virtual Assistance</h3>
+        <p>Flexible remote support for administrative, scheduling, research and recurring business tasks.</p>
+        <a class="learn" href="#contact">Learn more <i class="ti ti-arrow-up-right"></i></a>
+      </div>
+
+      <div class="card">
+        <div class="icon"><i class="ti ti-settings"></i></div>
+        <h3>Technical Support</h3>
+        <p>Structured assistance for customers and teams handling technical questions and operational workflows.</p>
+        <a class="learn" href="#contact">Learn more <i class="ti ti-arrow-up-right"></i></a>
+      </div>
+
+      <div class="card">
+        <div class="icon"><i class="ti ti-briefcase"></i></div>
+        <h3>Back-Office Support</h3>
+        <p>Reliable assistance with repetitive processes, data handling, administration and operational tasks.</p>
+        <a class="learn" href="#contact">Learn more <i class="ti ti-arrow-up-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="why">
+  <div class="container why-grid">
+    <div>
+      <div class="eyebrow">Why VoxBridge</div>
+      <h2>People-first service. Technology-assisted performance.</h2>
+      <p style="margin-top:22px">
+        We combine trained professionals with modern tools and AI-assisted workflows
+        to help businesses build responsive, organized and scalable support operations.
+      </p>
+      <div class="quote">
+        “We don't simply answer calls. We become an extension of the operation behind them.”
+      </div>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="number">01</div>
+        <div><h3>Trained Teams</h3><p>Professionally prepared staff focused on communication, consistency and client workflows.</p></div>
+      </div>
+      <div class="pillar">
+        <div class="number">02</div>
+        <div><h3>24/7 Support</h3><p>Support coverage designed for businesses operating beyond traditional working hours.</p></div>
+      </div>
+      <div class="pillar">
+        <div class="number">03</div>
+        <div><h3>AI-Assisted Operations</h3><p>Modern AI tools can support faster workflows, information handling and operational efficiency.</p></div>
+      </div>
+      <div class="pillar">
+        <div class="number">04</div>
+        <div><h3>Flexible Capacity</h3><p>Build the level of operational support your business needs as requirements evolve.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Our Process</div>
+      <h2>A straightforward path from conversation to operation.</h2>
+    </div>
+
+    <div class="process-grid">
+      <div class="step">
+        <div class="step-circle">01</div>
+        <h3>Understand</h3>
+        <p>We learn your goals, customers, workflows and support requirements.</p>
+      </div>
+      <div class="step">
+        <div class="step-circle">02</div>
+        <h3>Design</h3>
+        <p>We shape a support model around your processes and priorities.</p>
+      </div>
+      <div class="step">
+        <div class="step-circle">03</div>
+        <h3>Launch</h3>
+        <p>Our team is prepared around the workflows and standards your business needs.</p>
+      </div>
+      <div class="step">
+        <div class="step-circle">04</div>
+        <h3>Scale</h3>
+        <p>Expand support as your operation grows and your requirements change.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="industries">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Industries</div>
+      <h2>Operational support across modern industries.</h2>
+      <p>Flexible teams and workflows designed to adapt to different business environments.</p>
+    </div>
+
+    <div class="industries-grid">
+      <div class="industry"><i class="ti ti-shopping-cart"></i><h3>E-commerce</h3><p>Customer and operational support.</p></div>
+      <div class="industry"><i class="ti ti-code"></i><h3>Technology & SaaS</h3><p>Customer and technical assistance.</p></div>
+      <div class="industry"><i class="ti ti-heartbeat"></i><h3>Healthcare</h3><p>Structured support workflows.</p></div>
+      <div class="industry"><i class="ti ti-building-bank"></i><h3>Financial Services</h3><p>Professional customer communication.</p></div>
+      <div class="industry"><i class="ti ti-building"></i><h3>Real Estate</h3><p>Lead and administrative support.</p></div>
+      <div class="industry"><i class="ti ti-plane"></i><h3>Travel & Hospitality</h3><p>Customer and booking assistance.</p></div>
+      <div class="industry"><i class="ti ti-car"></i><h3>Transportation & Mobility</h3><p>Taxi, limo and dispatch operations.</p></div>
+      <div class="industry"><i class="ti ti-briefcase"></i><h3>Professional Services</h3><p>Flexible business support.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="global">
+  <div class="container">
+    <div class="eyebrow">Global Reach</div>
+    <h2>Pakistan-based operations. Global business support.</h2>
+    <p style="max-width:680px;margin:20px auto 0">
+      VoxBridge operates from Lahore, Pakistan and supports businesses serving customers across major international markets.
+    </p>
+
+    <div class="global-map">
+      <i class="ti ti-world map-icon"></i>
+    </div>
+
+    <div class="market-pills">
+      <span>United States</span>
+      <span>United Kingdom</span>
+      <span>Canada</span>
+      <span>Australia</span>
+      <span>UAE</span>
+      <span>Europe</span>
+    </div>
+  </div>
+</section>
+
+<section class="quality">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Quality</div>
+      <h2>Standards that shape every interaction.</h2>
+    </div>
+
+    <div class="quality-grid">
+      <div class="quality-card">
+        <strong>01</strong>
+        <h3>Professionalism</h3>
+        <p>Clear communication, respectful interactions and a professional approach to every customer conversation.</p>
+      </div>
+      <div class="quality-card">
+        <strong>02</strong>
+        <h3>Consistency</h3>
+        <p>Structured workflows and trained teams built around dependable day-to-day execution.</p>
+      </div>
+      <div class="quality-card">
+        <strong>03</strong>
+        <h3>Accountability</h3>
+        <p>We take ownership of the responsibilities entrusted to our teams and operations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tech">
+  <div class="container tech-grid">
+    <div>
+      <div class="eyebrow">Transportation Technology</div>
+      <h2>Experienced with the workflows behind modern dispatch.</h2>
+      <p style="margin-top:20px">
+        Our trained transportation support team understands the day-to-day requirements
+        of taxi, limousine and chauffeur operations and can adapt to the software and
+        processes used by each client.
+      </p>
+    </div>
+
+    <div class="tech-list">
+      <div class="tech-item">
+        <i class="ti ti-device-desktop"></i>
+        <div>
+          <h3>Limo Anywhere</h3>
+          <p>Team experience with Limo Anywhere workflows and transportation operations.</p>
+        </div>
+      </div>
+
+      <div class="tech-item">
+        <i class="ti ti-route"></i>
+        <div>
+          <h3>Dispatch Workflows</h3>
+          <p>Reservation, scheduling, dispatch coordination and driver communication.</p>
+        </div>
+      </div>
+
+      <div class="tech-item">
+        <i class="ti ti-arrows-exchange"></i>
+        <div>
+          <h3>Adaptable Systems</h3>
+          <p>Our teams can learn and work within the software environment your business already uses.</p>
+        </div>
+      </div>
+
+      <div class="tech-item">
+        <i class="ti ti-sparkles"></i>
+        <div>
+          <h3>AI-Assisted Support</h3>
+          <p>Modern AI tools can assist teams with repetitive workflows and information handling.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-copy">
+      <div class="eyebrow">About VoxBridge</div>
+      <h2>Built to become an extension of your business.</h2>
+      <p>
+        VoxBridge Support helps international businesses strengthen customer
+        communication and streamline everyday operations through trained teams,
+        structured processes and modern technology.
+      </p>
+      <p>
+        From BPO and customer support to taxi and limo dispatch, our goal is simple:
+        provide dependable people and processes that help your business operate better.
+      </p>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <small>Mission</small>
+        <strong>Deliver dependable business support with professionalism and consistency.</strong>
+      </div>
+      <div class="stat">
+        <small>Operations Center</small>
+        <strong>Lahore, Pakistan</strong>
+      </div>
+      <div class="stat">
+        <small>Legal Entity</small>
+        <strong>Voxbridge Support LLC — Wyoming, USA</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container cta-inner">
+    <h2>Ready to Build a Better Support Operation?</h2>
+    <p>
+      Tell us what your business needs and let's explore how VoxBridge can support your operation.
+    </p>
+    <a href="#contact" class="btn btn-primary">Get Started <i class="ti ti-arrow-right"></i></a>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-copy">
+      <div class="eyebrow">Let's Talk</div>
+      <h2>Tell us what you need support with.</h2>
+      <p>
+        Whether you need customer support, BPO services, taxi dispatch,
+        limo dispatch or operational assistance, send us a few details and our team can review your requirements.
+      </p>
+      <p style="font-size:13px;margin-top:28px">
+        <strong>Voxbridge Support LLC</strong><br>
+        Formed in Wyoming, USA<br>
+        Operations Center: Lahore, Pakistan<br>
+        LLC Address: Sheridan, WY 82801
+      </p>
+    </div>
+
+    <form class="form" onsubmit="return handleSubmit(event)">
+      <div class="field">
+        <label>Full Name</label>
+        <input type="text" required placeholder="Your name">
+      </div>
+
+      <div class="field">
+        <label>Business Email</label>
+        <input type="email" required placeholder="you@company.com">
+      </div>
+
+      <div class="field">
+        <label>Company Name</label>
+        <input type="text" placeholder="Company">
+      </div>
+
+      <div class="field">
+        <label>Country</label>
+        <input type="text" placeholder="Country">
+      </div>
+
+      <div class="field">
+        <label>Phone</label>
+        <input type="tel" placeholder="+1 ...">
+      </div>
+
+      <div class="field">
+        <label>Service</label>
+        <select>
+          <option>Customer Support</option>
+          <option>Call Center Services</option>
+          <option>Taxi Dispatch</option>
+          <option>Limo Dispatch</option>
+          <option>Lead Generation</option>
+          <option>Virtual Assistance</option>
+          <option>Technical Support</option>
+          <option>Back-Office Support</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="field full">
+        <label>Team Size Needed</label>
+        <input type="text" placeholder="e.g. 2 agents, 5 agents, 10+ agents">
+      </div>
+
+      <div class="field full">
+        <label>Message</label>
+        <textarea placeholder="Tell us about your requirements..."></textarea>
+      </div>
+
+      <div class="privacy">
+        By submitting this form, you agree that VoxBridge may use the information provided to respond to your inquiry.
+      </div>
+
+      <button class="btn btn-primary" type="submit">Send Inquiry <i class="ti ti-arrow-right"></i></button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">Vox<span>Bridge</span></div>
+        <p>
+          Global BPO, customer experience, transportation dispatch and business support.
+        </p>
+        <a class="btn btn-primary" href="#contact">Talk to Our Team</a>
+      </div>
+
+      <div>
+        <h4>Navigation</h4>
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#industries">Industries</a>
+          <a href="#why">Why VoxBridge</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <div class="footer-links">
+          <a href="#services">Customer Support</a>
+          <a href="#services">Taxi Dispatch</a>
+          <a href="#services">Limo Dispatch</a>
+          <a href="#services">Lead Generation</a>
+          <a href="#services">Virtual Assistance</a>
+          <a href="#services">Back-Office</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Company</h4>
+        <div class="footer-links">
+          <a href="#about">About VoxBridge</a>
+          <a href="#contact">Get Started</a>
+          <a href="#contact">Business Inquiry</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="legal">
+      <span>© 2026 Voxbridge Support LLC. All rights reserved.</span>
+      <span>Voxbridge Support LLC • Wyoming, USA • Operations Center: Lahore, Pakistan</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function handleSubmit(e){
+  e.preventDefault();
+  alert("Thank you. Your inquiry has been prepared for submission. Connect this form to your preferred email/form service before launch.");
+  return false;
+}
+</script>
+
+</body>
+</html>
