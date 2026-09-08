@@ -400,19 +400,24 @@ p{color:var(--muted)}
   color:white;
   text-align:center;
 }
+
 .global-map{
   margin:45px auto 25px;
   max-width:850px;
-  min-height:260px;
+  min-height:360px;
   border:1px solid rgba(255,255,255,.1);
   border-radius:18px;
   display:flex;
   align-items:center;
   justify-content:center;
   background:
-    radial-gradient(circle at 50% 50%,rgba(29,78,216,.13),transparent 48%);
+    linear-gradient(rgba(6,13,31,.25),rgba(6,13,31,.25)),
+    url("logos/globalreach.jpg") center center / cover no-repeat;
+  overflow:hidden;
 }
-.map-icon{font-size:180px;color:#334155}
+.map-icon{
+  display:none;
+}
 .market-pills{display:flex;justify-content:center;gap:9px;flex-wrap:wrap}
 .market-pills span{
   border:1px solid rgba(255,255,255,.14);
